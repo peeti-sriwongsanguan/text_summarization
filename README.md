@@ -5,28 +5,30 @@ Showcase of using comparison between Summarization and Question Answering with T
 
 <br>
 
+<h2>For this demonstration: I want to use transformer to summarize and give question and answer this statement below</h2>
+
+<i>Hyperbaric (high-pressure) medicine uses special oxygen
+chambers to increase the partial pressure of O 2 around the patient and, when needed,
+the medical staff. Carbon monoxide poisoning, gas gangrene, and decompression sickness
+(the ’bends’) are sometimes treated using these devices. Increased O 2 concentration
+in the lungs helps to displace carbon monoxide from the heme group of hemoglobin.
+Oxygen gas is poisonous to the anaerobic bacteria that cause gas gangrene, so increasing
+its partial pressure helps kill them. Decompression sickness occurs in divers who
+decompress too quickly after a dive, resulting in bubbles of inert gas, mostly nitrogen
+and helium, forming in their blood. Increasing the pressure of O 2 as soon as possible
+is part of the treatment.</i>
+
 **For abstractive summarization example** <p>I will use T5 to summarize some input text. We do this because the text in -> text out interface as well as the multi-task fine tuning makes it a great vehicle for demonstration</p>
 
 
 <li><h1>1. Setup</h1>¶
-Let's set up our environment so we can grab the wikipedia page on Natural Language Processing. You can modify the string to find the Wikipedia page of your choice. We'll need NLTK to build our extractive summarizer.
 
-We'll also need the HuggingFace Transformers library for our abstractive summarization and question answering examples.
+
+I'll use HuggingFace Transformers library for our extraction and abstractive summarization and question answering examples.
 
 Now let's get a document to summarize. We'll use Wikipedia since it contains a large number of longer documents.
-```
-!pip install -q wikipedia
-!pip install -q sentencepiece
-!pip install -q transformers
-```
 
-```
-import nltk
-import nltk.corpus
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-```
+
 Then import tensorflow and T5 from Hugging Face
 
 ```
@@ -36,3 +38,5 @@ from transformers import T5Tokenizer, TFT5Model, TFT5ForConditionalGeneration
 ```
 
 </li>
+
+<h3>I am amazed by the results of those senarios.... please see the notebooks</h3>
